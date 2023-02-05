@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bPopular"
+        android:layout_width="170dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="17dp"
+        android:backgroundTint="@color/blue_100"
+        android:text="@string/popular"
+        android:textColor="@color/blue_200"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bFavorite"
+        android:layout_width="170dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="17dp"
+        android:backgroundTint="@color/blue_200"
+        android:text="@string/favorite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/bTryAgain"
+        android:layout_width="170dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/blue_200"
+        android:text="@string/try_again"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tvNoConnection"
+        app:layout_constraintStart_toStartOf="@+id/tvNoConnection"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoConnection" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/blue_200"
+        android:rotation="199"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/ivNoConnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.339"
+        app:srcCompat="@drawable/no_connection" />
+
+    <TextView
+        android:id="@+id/tvNoConnection"
+        android:layout_width="275dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/no_connection"
+        android:textColor="@color/blue_200"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/ivNoConnection"
+        app:layout_constraintStart_toStartOf="@+id/ivNoConnection"
+        app:layout_constraintTop_toBottomOf="@+id/ivNoConnection" />
+
+    <Button
+        android:id="@+id/bSomeFilm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="188dp"
+        android:text="какой-то фильм"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFilms"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bFavorite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
