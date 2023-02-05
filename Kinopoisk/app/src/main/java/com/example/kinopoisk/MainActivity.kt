@@ -38,12 +38,14 @@ class MainActivity : AppCompatActivity() {
         bindingClass.bPopular.setOnClickListener {
             supportActionBar?.title = getString(R.string.popular)
             bindingClass.rvFilms.visibility = View.VISIBLE
+            bindingClass.bSomeFilm.visibility = View.VISIBLE
             checkConnection()
         }
         // слушатель нажатий на кнопку "Избранное"
         bindingClass.bFavorite.setOnClickListener {
             supportActionBar?.title = getString(R.string.favorite)
             bindingClass.rvFilms.visibility = View.GONE
+            bindingClass.bSomeFilm.visibility = View.GONE
             checkConnection()
         }
         ///////////
